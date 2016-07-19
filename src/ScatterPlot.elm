@@ -11,6 +11,7 @@ module ScatterPlot exposing
 
 -}
 
+
 import List exposing (map)
 import Svg exposing (Svg, Attribute, g, circle)
 import Svg.Attributes exposing (fill, cx, cy, r)
@@ -23,11 +24,13 @@ type alias DotProps =
   }
 
 
+{-|-}
 size : String -> Svg.Attribute msg
 size =
   Svg.Attributes.r
 
 
+{-|-}
 color : String -> Svg.Attribute msg
 color =
   Svg.Attributes.fill
@@ -45,6 +48,7 @@ dot attrs { x, y } =
     []
 
 
+{-|-}
 scatterPlot : List (Svg.Attribute msg) -> (ChartProps msg) -> Svg msg
 scatterPlot attrs { data, xScale, yScale } =
   g []

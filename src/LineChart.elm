@@ -18,11 +18,13 @@ import Svg.Attributes exposing (strokeWidth, stroke, d, fill)
 import Chart exposing (Data, Scale, ChartProps)
 
 
+{-|-}
 width : String -> Svg.Attribute msg
 width =
   Svg.Attributes.strokeWidth
 
 
+{-|-}
 color : String -> Svg.Attribute msg
 color =
   Svg.Attributes.stroke
@@ -45,6 +47,8 @@ convertDataToPathByScale : Scale -> Scale -> Data msg -> String
 convertDataToPathByScale xScale yScale data =
   transformDataToCoordinatesByScale xScale yScale data |> creatPath
 
+
+{-|-}
 lineChart : List (Svg.Attribute msg) -> (ChartProps msg) -> Svg msg
 lineChart attrs { data, xScale, yScale } =
   g []

@@ -24,11 +24,13 @@ type alias BarProps =
   }
 
 
+{-|-}
 width : String -> Svg.Attribute msg
 width =
   Svg.Attributes.strokeWidth
 
 
+{-|-}
 color : String -> Svg.Attribute msg
 color =
   Svg.Attributes.stroke
@@ -48,6 +50,7 @@ bar attrs { x, y1, y2 } =
     []
 
 
+{-|-}
 barChart : List (Svg.Attribute msg) -> (ChartProps msg) -> Svg msg
 barChart attrs { data, xScale, yScale } =
   g []
