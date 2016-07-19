@@ -12,7 +12,7 @@ module LineChart exposing
 -}
 
 import List exposing (map, foldl)
-import String exposing (..)
+import String exposing (dropRight)
 import Svg exposing (Svg, g, path)
 import Svg.Attributes exposing (strokeWidth, stroke, d, fill)
 import Chart exposing (Data, Scale, ChartProps)
