@@ -3,6 +3,7 @@ import Svg.Attributes exposing (width, height)
 import Chart exposing (Scale, Data)
 import BarChart exposing (barChart, color, width)
 import LineChart exposing (lineChart, color, width)
+import ScatterPlot exposing (scatterPlot, color, size)
 
 
 data : Data msg
@@ -49,5 +50,11 @@ main =
         { data = data
         , xScale = xScale
         , yScale = (\y -> 500 - y * 3)
+        },
+      scatterPlot
+        []
+        { data = data
+        , xScale = xScale
+        , yScale = (\y -> 400 - y * 3)
         }
     ]
