@@ -1,7 +1,7 @@
 # elm-charts
 A pure Elm chart library
 
-_This project is still in alpha, APIs might heavily in the future._
+__This project is still in alpha, so APIs might heavily in the future.__
 
 ## Quick Example
 
