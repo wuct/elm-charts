@@ -2,6 +2,7 @@ import Svg exposing (svg)
 import Svg.Attributes exposing (width, height)
 import Chart exposing (Scale, Data)
 import BarChart exposing (barChart, color, width)
+import LineChart exposing (lineChart, color, width)
 
 
 data : Data msg
@@ -35,10 +36,18 @@ main =
       barChart
         [
           BarChart.color "pink",
-          BarChart.width "5"
+          BarChart.width "10"
         ]
         { data = data
         , xScale = xScale
         , yScale = yScale
+        },
+      lineChart
+        [
+          LineChart.color "#7E94C7"
+        ]
+        { data = data
+        , xScale = xScale
+        , yScale = (\y -> 500 - y * 3)
         }
     ]

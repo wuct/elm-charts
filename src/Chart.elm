@@ -1,9 +1,9 @@
-module Chart exposing (Datum, Data, Scale)
+module Chart exposing (Datum, Data, Scale, ChartProps)
 
 {-|
 
 # Type
-@docs Datum, Data, Scale
+@docs Datum, Data, Scale, ChartProps
 
 -}
 
@@ -17,3 +17,9 @@ type alias Data msg = List (Datum msg)
 
 
 type alias Scale = Float -> Float
+
+type alias ChartProps msg =
+  { data : Data msg
+  , xScale : Scale
+  , yScale: Scale
+  }

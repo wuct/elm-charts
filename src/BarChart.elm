@@ -14,7 +14,7 @@ module BarChart exposing
 import List exposing (map)
 import Svg exposing (Svg, Attribute, g, line)
 import Svg.Attributes exposing (strokeWidth, stroke, x1, x2, y1, y2)
-import Chart exposing (Datum, Data, Scale)
+import Chart exposing (Data, Scale, ChartProps)
 
 
 type alias BarProps =
@@ -24,19 +24,14 @@ type alias BarProps =
   }
 
 
-type alias BarChartProps msg =
-  { data : Data msg
-  , xScale : Scale
-  , yScale: Scale
-  }
-
-
 width : String -> Svg.Attribute msg
-width = Svg.Attributes.strokeWidth
+width =
+  Svg.Attributes.strokeWidth
 
 
 color : String -> Svg.Attribute msg
-color = Svg.Attributes.stroke
+color =
+  Svg.Attributes.stroke
 
 
 bar : List (Svg.Attribute msg) -> BarProps -> Svg msg
@@ -53,7 +48,7 @@ bar attrs { x, y1, y2 } =
     []
 
 
-barChart : List (Svg.Attribute msg) -> (BarChartProps msg) -> Svg msg
+barChart : List (Svg.Attribute msg) -> (ChartProps msg) -> Svg msg
 barChart attrs { data, xScale, yScale } =
   g []
     (
