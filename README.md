@@ -1,6 +1,8 @@
 # elm-charts
 A pure Elm chart library
 
+_This project is still in alpha, APIs might heavily in the future._
+
 ## Quick Example
 
 ```Elm
@@ -65,3 +67,11 @@ main =
         }
     ]
 ```
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
