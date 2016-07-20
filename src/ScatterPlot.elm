@@ -6,7 +6,7 @@ module ScatterPlot exposing
 # Scatter Plot
 @docs scatterPlot
 
-# Attrs
+# Attributes
 @docs size, color
 
 -}
@@ -24,13 +24,15 @@ type alias DotProps =
   }
 
 
-{-|-}
+{-| Set dot size.
+-}
 size : String -> Svg.Attribute msg
 size =
   Svg.Attributes.r
 
 
-{-|-}
+{-| Set dot color.
+-}
 color : String -> Svg.Attribute msg
 color =
   Svg.Attributes.fill
@@ -48,7 +50,54 @@ dot attrs { x, y } =
     []
 
 
-{-|-}
+{-| Create a scatter plot.
+
+    import Svg exposing (svg)
+    import Svg.Attributes exposing (width, height)
+    import Chart exposing (Scale, Data)
+    import ScatterPlot exposing (scatterPlot, color, size)
+
+
+    data : Data msg
+    data =
+      [
+        (1, 22.2, []),
+        (2, 34, []),
+        (3, 56, []),
+        (4, 62, []),
+        (5, 77, [])
+      ]
+
+
+    xScale : Scale
+    xScale x =
+      20 + x * 20
+
+
+    yScale : Scale
+    yScale y =
+      400 - y * 3
+
+
+    main =
+      svg
+        [
+          Svg.Attributes.width "600",
+          Svg.Attributes.height "400"
+        ]
+        [
+          scatterPlot
+            [
+              ScatterPlot.color "#9F7088",
+              ScatterPlot.size "4"
+            ]
+            { data = data
+            , xScale = xScale
+            , yScale = yScale
+            }
+        ]
+
+-}
 scatterPlot : List (Svg.Attribute msg) -> (ChartProps msg) -> Svg msg
 scatterPlot attrs { data, xScale, yScale } =
   g []

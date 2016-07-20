@@ -6,7 +6,7 @@ module BarChart exposing
 # Bar Chart
 @docs barChart
 
-# Attrs
+# Attributes
 @docs width, color
 
 -}
@@ -24,13 +24,15 @@ type alias BarProps =
   }
 
 
-{-|-}
+{-| Set bar width.
+-}
 width : String -> Svg.Attribute msg
 width =
   Svg.Attributes.strokeWidth
 
 
-{-|-}
+{-| Set bar color.
+-}
 color : String -> Svg.Attribute msg
 color =
   Svg.Attributes.stroke
@@ -50,7 +52,54 @@ bar attrs { x, y1, y2 } =
     []
 
 
-{-|-}
+{-| Create a bar chart.
+
+    import Svg exposing (svg)
+    import Svg.Attributes exposing (width, height)
+    import Chart exposing (Scale, Data)
+    import BarChart exposing (barChart, color, width)
+
+
+    data : Data msg
+    data =
+      [
+        (1, 22.2, []),
+        (2, 34, []),
+        (3, 56, []),
+        (4, 62, []),
+        (5, 77, [])
+      ]
+
+
+    xScale : Scale
+    xScale x =
+      20 + x * 20
+
+
+    yScale : Scale
+    yScale y =
+      400 - y * 3
+
+
+    main =
+      svg
+        [
+          Svg.Attributes.width "600",
+          Svg.Attributes.height "400"
+        ]
+        [
+          barChart
+            [
+              BarChart.color "#9F7088",
+              BarChart.width "10"
+            ]
+            { data = data
+            , xScale = xScale
+            , yScale = yScale
+            }
+        ]
+
+-}
 barChart : List (Svg.Attribute msg) -> (ChartProps msg) -> Svg msg
 barChart attrs { data, xScale, yScale } =
   g []
