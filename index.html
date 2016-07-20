@@ -7755,7 +7755,7 @@ var _wuct$elm_charts$Main$yScale = function (y) {
 	return 600 - (y * 3);
 };
 var _wuct$elm_charts$Main$xScale = function (x) {
-	return 20 + (x * 20);
+	return 20 + (x * 100);
 };
 var _wuct$elm_charts$Main$data = _elm_lang$core$Native_List.fromArray(
 	[
@@ -7779,7 +7779,8 @@ var _wuct$elm_charts$Main$data = _elm_lang$core$Native_List.fromArray(
 		_1: 56,
 		_2: _elm_lang$core$Native_List.fromArray(
 			[
-				_wuct$elm_charts$BarChart$color('yellowgreen')
+				_wuct$elm_charts$BarChart$color('#AF86B4'),
+				_wuct$elm_charts$ScatterPlot$size('10')
 			])
 	},
 		{
@@ -7802,7 +7803,7 @@ var _wuct$elm_charts$Main$main = {
 		_elm_lang$svg$Svg$svg,
 		_elm_lang$core$Native_List.fromArray(
 			[
-				_elm_lang$svg$Svg_Attributes$width('1000'),
+				_elm_lang$svg$Svg_Attributes$width('800'),
 				_elm_lang$svg$Svg_Attributes$height('600')
 			]),
 		_elm_lang$core$Native_List.fromArray(
@@ -7811,32 +7812,36 @@ var _wuct$elm_charts$Main$main = {
 				_wuct$elm_charts$BarChart$barChart,
 				_elm_lang$core$Native_List.fromArray(
 					[
-						_wuct$elm_charts$BarChart$color('pink'),
-						_wuct$elm_charts$BarChart$width('10')
+						_wuct$elm_charts$BarChart$color('#F4BDBC'),
+						_wuct$elm_charts$BarChart$width('20')
 					]),
 				{data: _wuct$elm_charts$Main$data, xScale: _wuct$elm_charts$Main$xScale, yScale: _wuct$elm_charts$Main$yScale}),
 				A2(
 				_wuct$elm_charts$LineChart$lineChart,
 				_elm_lang$core$Native_List.fromArray(
 					[
-						_wuct$elm_charts$LineChart$color('#7E94C7')
+						_wuct$elm_charts$LineChart$color('#7E94C7'),
+						_wuct$elm_charts$LineChart$width('4')
 					]),
 				{
 					data: _wuct$elm_charts$Main$data,
 					xScale: _wuct$elm_charts$Main$xScale,
 					yScale: function (y) {
-						return 500 - (y * 3);
+						return 500 - (y * 4);
 					}
 				}),
 				A2(
 				_wuct$elm_charts$ScatterPlot$scatterPlot,
 				_elm_lang$core$Native_List.fromArray(
-					[]),
+					[
+						_wuct$elm_charts$ScatterPlot$size('6'),
+						_wuct$elm_charts$ScatterPlot$color('#D5B545')
+					]),
 				{
 					data: _wuct$elm_charts$Main$data,
 					xScale: _wuct$elm_charts$Main$xScale,
 					yScale: function (y) {
-						return 400 - (y * 3);
+						return 400 - (y * 4);
 					}
 				})
 			]))
