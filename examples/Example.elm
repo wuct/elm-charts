@@ -11,7 +11,7 @@ data =
   [
     (1, 22.2, []),
     (2, 34, []),
-    (3, 56, [BarChart.color "yellowgreen"]),
+    (3, 56, [BarChart.color "#AF86B4", ScatterPlot.size "10"]),
     (4, 62, []),
     (5, 77, [])
   ]
@@ -19,7 +19,7 @@ data =
 
 xScale : Scale
 xScale x =
-  20 + x * 20
+  20 + x * 100
 
 
 yScale : Scale
@@ -30,14 +30,14 @@ yScale y =
 main =
   svg
     [
-      Svg.Attributes.width "1000",
+      Svg.Attributes.width "800",
       Svg.Attributes.height "600"
     ]
     [
       barChart
         [
-          BarChart.color "pink",
-          BarChart.width "10"
+          BarChart.color "#F4BDBC",
+          BarChart.width "20"
         ]
         { data = data
         , xScale = xScale
@@ -45,16 +45,20 @@ main =
         },
       lineChart
         [
-          LineChart.color "#7E94C7"
+          LineChart.color "#7E94C7",
+          LineChart.width "4"
         ]
         { data = data
         , xScale = xScale
-        , yScale = (\y -> 500 - y * 3)
+        , yScale = (\y -> 500 - y * 4)
         },
       scatterPlot
-        []
+        [
+          ScatterPlot.size "6",
+          ScatterPlot.color "#D5B545"
+        ]
         { data = data
         , xScale = xScale
-        , yScale = (\y -> 400 - y * 3)
+        , yScale = (\y -> 400 - y * 4)
         }
     ]
