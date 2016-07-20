@@ -3,6 +3,20 @@ A pure Elm chart library
 
 __This project is still in alpha. APIs might change heavily in the future.__
 
+
+# Try
+
+1. `git clone https://github.com/wuct/elm-charts.git`
+2. `cd elm-charts`
+3. `elm package install`
+4. `elm reactor`
+5. go to [http://localhost:8000/examples/Example.elm]()
+
+# Install
+
+`elm package install wuct/elm-charts`
+
+
 ## Quick Example
 
 ```Elm
