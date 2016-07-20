@@ -7755,7 +7755,7 @@ var _wuct$elm_charts$Main$yScale = function (y) {
 	return 600 - (y * 3);
 };
 var _wuct$elm_charts$Main$xScale = function (x) {
-	return 20 + (x * 50);
+	return 20 + (x * 20);
 };
 var _wuct$elm_charts$Main$data = _elm_lang$core$Native_List.fromArray(
 	[
@@ -7778,7 +7778,9 @@ var _wuct$elm_charts$Main$data = _elm_lang$core$Native_List.fromArray(
 		_0: 3,
 		_1: 56,
 		_2: _elm_lang$core$Native_List.fromArray(
-			[])
+			[
+				_wuct$elm_charts$BarChart$color('yellowgreen')
+			])
 	},
 		{
 		ctor: '_Tuple3',
@@ -7809,7 +7811,7 @@ var _wuct$elm_charts$Main$main = {
 				_wuct$elm_charts$BarChart$barChart,
 				_elm_lang$core$Native_List.fromArray(
 					[
-						_wuct$elm_charts$BarChart$color('#E6BEBC'),
+						_wuct$elm_charts$BarChart$color('pink'),
 						_wuct$elm_charts$BarChart$width('10')
 					]),
 				{data: _wuct$elm_charts$Main$data, xScale: _wuct$elm_charts$Main$xScale, yScale: _wuct$elm_charts$Main$yScale}),
