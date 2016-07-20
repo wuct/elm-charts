@@ -4,7 +4,10 @@ A pure Elm chart library
 __This project is still in alpha. APIs might change heavily in the future.__
 
 
-# Try
+- [__Demo__](https://wuct.github.io/elm-charts/)
+- [__API Documentation__](http://package.elm-lang.org/packages/wuct/elm-charts/latest/)
+
+## To Try
 
 1. `git clone https://github.com/wuct/elm-charts.git`
 2. `cd elm-charts`
@@ -12,12 +15,14 @@ __This project is still in alpha. APIs might change heavily in the future.__
 4. `elm reactor`
 5. go to [http://localhost:8000/examples/Example.elm]()
 
-# Install
+
+## To Install
 
 `elm package install wuct/elm-charts`
 
 
 ## Quick Example
+
 
 ```Elm
 import Svg exposing (svg)
@@ -82,7 +87,8 @@ main =
     ]
 ```
 
-## Contributing
+
+## To Contribute
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
