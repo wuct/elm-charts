@@ -20,6 +20,18 @@ __This project is still in alpha. APIs might change heavily in the future.__
 
 `elm package install wuct/elm-charts`
 
+## Update to Elm >= 0.18
+
+Run 
+
+`
+elm-package install elm-lang/svg 2.0.0
+elm-package install elm-lang/core 5.1.1
+`
+
+Or update existing packages
+
+
 
 ## Quick Example
 
