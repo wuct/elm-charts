@@ -1,6 +1,8 @@
 # elm-charts
 A pure Elm chart library
 
+[![GitHub tag](https://img.shields.io/github/tag/wuct/elm-charts.svg)](http://package.elm-lang.org/packages/wuct/elm-charts)
+
 __This project is still in alpha. APIs might change heavily in the future.__
 
 
